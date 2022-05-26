@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
     useHMSActions,
-    } from "@100mslive/react-sdk"
-import GetToken from './getToken'
-import '../App.css'
+    } from "@100mslive/react-sdk";
+import GetToken from '../utils/getToken';
+import '../App.css';
 
 export default function JoinRoom() {
     const hmsActions = useHMSActions()
 
-    const [name, setName] = useState("")
+    const [name, setName] = useState("Anonymous")
     const [joinStatus, setJoinStatus] = useState("");
     const [role, setRole] = useState('stage');
 

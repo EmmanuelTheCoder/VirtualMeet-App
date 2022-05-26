@@ -12,9 +12,9 @@ import {
 
 export default function VideoTile({peer}) {
 
+    const isConnected = useHMSStore(selectIsConnectedToRoom)
     const videoRef = useRef(null)
     const hmsActions = useHMSActions();
-    const isConnected = useHMSStore(selectIsConnectedToRoom)
 
     const videoTrack = useHMSStore(selectCameraStreamByPeerID(peer.id))
     useEffect(() =>{
